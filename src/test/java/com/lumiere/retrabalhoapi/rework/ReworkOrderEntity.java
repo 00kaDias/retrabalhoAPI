@@ -1,4 +1,4 @@
-package com.lumiere.retrabalhoapi.reworkOrder;
+package com.lumiere.retrabalhoapi.rework;
 
 import com.lumiere.retrabalhoapi.employee.EmployeeEntity;
 import jakarta.persistence.Column;
@@ -13,7 +13,7 @@ import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
-public class ReworkOrder {
+public class ReworkOrderEntity {
 
     // Entry
     @Id
@@ -21,7 +21,7 @@ public class ReworkOrder {
     private Long id;
     @Column(nullable = false, unique = true)
     private String orderNumber;
-    private EmployeeEntity entryEmployee;
+    private String operatorId;
 
     private LocalDate entryAt;
 
